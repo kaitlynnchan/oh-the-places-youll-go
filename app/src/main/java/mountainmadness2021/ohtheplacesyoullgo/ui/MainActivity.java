@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
                 // Generates random number for array position
                 int int_random = rand.nextInt(places.length);
-                TextView place = findViewById(R.id.tv_place);
-                place.setText(places[int_random] + "");
 //                System.out.println(places[int_random]);
 
 
