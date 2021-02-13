@@ -6,11 +6,12 @@ public class Location {
     private String city;
     private String country;
     private double estimatedCost;
-    private ArrayList<String> attractions;
+    private String [] attractions;
 
-    public Location(String city, String country) {
+    public Location(String city, String country, String [] attractions) {
         this.city = city;
         this.country = country;
+        this.attractions = attractions;
     }
 
     public String getCity() {
@@ -37,11 +38,11 @@ public class Location {
         this.estimatedCost = estimatedCost;
     }
 
-    public ArrayList<String> getAttractions() {
+    public String[] getAttractions() {
         return attractions;
     }
 
-    public void setAttractions(ArrayList<String> attractions) {
+    public void setAttractions(String [] attractions) {
         this.attractions = attractions;
     }
 }
