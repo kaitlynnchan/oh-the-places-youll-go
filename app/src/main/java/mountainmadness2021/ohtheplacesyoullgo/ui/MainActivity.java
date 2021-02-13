@@ -1,13 +1,16 @@
-package mountainmadness2021.ohtheplacesyoullgo;
+package mountainmadness2021.ohtheplacesyoullgo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.*;
+
+import mountainmadness2021.ohtheplacesyoullgo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 int int_random = rand.nextInt(places.length);
                 TextView place = findViewById(R.id.tv_place);
                 place.setText(places[int_random] + "");
-                System.out.println(places[int_random]);
+//                System.out.println(places[int_random]);
 
 
+                Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, places[int_random]);
+                startActivity(intent);
             }
         });
     }
