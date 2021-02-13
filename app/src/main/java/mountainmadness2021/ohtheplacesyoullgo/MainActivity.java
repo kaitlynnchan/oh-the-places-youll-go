@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
                         "Bangkok, Thailand", "Bali, India", "London, England", "New Orleans, USA", "Honolulu, USA", "Kuala Lumpur, Malaysia", "Istanbul, Turkey", "Tokyo, Japan",};
 
                 // Generates random number for array position
-                int int_random = rand.nextInt(numPlaces);
-
+                int int_random = rand.nextInt(places.length);
+                TextView place = findViewById(R.id.tv_place);
+                place.setText(places[int_random] + "");
                 System.out.println(places[int_random]);
 
 
