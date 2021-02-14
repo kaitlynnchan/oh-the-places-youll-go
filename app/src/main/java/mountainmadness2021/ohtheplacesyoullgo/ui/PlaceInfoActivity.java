@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,6 +40,7 @@ public class PlaceInfoActivity extends AppCompatActivity {
         locationtv.setText(location.getCity() + ",\n" + location.getCountry());
 
         setupAttractions();
+        setupBackButton();
     }
 
     private void setupAttractions() {
@@ -48,5 +51,15 @@ public class PlaceInfoActivity extends AppCompatActivity {
 
             attractionsLl.addView(textView);
         }
+    }
+
+    private void setupBackButton() {
+        ImageButton backBtn = findViewById(R.id.img_btn_back);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 }

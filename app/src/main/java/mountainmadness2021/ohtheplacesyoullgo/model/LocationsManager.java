@@ -4,28 +4,28 @@ import java.util.*;
 
 public class LocationsManager {
 
-    String[] parisA = {"Eiffel Tower", "Louvre Museum", "Arc de Triomphe"};
-    String[] sydneyA = {"Bondi Beach", "Sydney Opera House", "Sydney Harbour Bridge"};
-    String[] queenstownA = {"The Remarkables", "Routeburn Track", "Milford Sound"};
-    String [] dublinA = {"Dublin Castle", "Phoenix Park and Dublin Zoo", "Guinness Storehouse"};
-    String [] nycA = {"Statue of Liberty", "Central Park", "Empire State Building"};
-    String [] mauiA = {"Hana Highway", "Kaanapali Beach", "Haleakala National Park"};
-    String [] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre"};
-    String[] cancunA = {"Cancun Underwater Museum", "Playa Norte", "Xcaret Park"};
-    String [] santA = {"Kamari Beach", "Amoudi Bay", "Fira to Oia Hike"};
-    String [] veniceA = {"St. Mark’s Square", "Murano, Burano and Torcello", "Venice Gondola Ride"};
-    String [] milanA = {"Duomo di Milan", "Galleria Vittorio Emanuele II", "Lake Como"};
-    String [] boraA = {"Maitra Beach", "Coral Gardens", "Shark/Stingray Feeding"};
-    String[] dubaiA = {"Burj Khalifa", "Dubai Mall", "Burj Al Arab"};
-    String [] bangkokA = {"The Grand Palace", "Chatuchak Market", "Chao Phraya River"};
-    String [] baliA = {"Sanur", "Uluwatu Temple", "Ubud Monkey Forest"};
-    String [] londonA = {"Big Ben", "Tower of London", "London Eye"};
-    String [] newoA = {"Bourbon Street", "Jackson Square", "French Quarter"};
-    String [] honoA = {"Hanauma Bay", "Diamond Head", "Waikiki Beach"};
-    String [] kualaA = {"Batu Caves", "Menara Kuala Lumpur", "Petronas Towers"};
-    String [] instanbulA = {"Hagia Sophia", "Blue Mosque", "Topkapi Palace"};
-    String [] tokyoA = {"Tokyo Skytree", "Sensoji Temple", "Ueno Park"};
-
+    // find algorithm to get top tourist attractions
+    private String[] parisA = {"Eiffel Tower", "Louvre Museum", "Arc de Triomphe"};
+    private String[] sydneyA = {"Bondi Beach", "Sydney Opera House", "Sydney Harbour Bridge"};
+    private String[] queenstownA = {"The Remarkables", "Routeburn Track", "Milford Sound"};
+    private String[] dublinA = {"Dublin Castle", "Phoenix Park and Dublin Zoo", "Guinness Storehouse"};
+    private String[] nycA = {"Statue of Liberty", "Central Park", "Empire State Building"};
+    private String[] mauiA = {"Hana Highway", "Kaanapali Beach", "Haleakala National Park"};
+    private String[] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre"};
+    private String[] cancunA = {"Cancun Underwater Museum", "Playa Norte", "Xcaret Park"};
+    private String[] santA = {"Kamari Beach", "Amoudi Bay", "Fira to Oia Hike"};
+    private String[] veniceA = {"St. Mark’s Square", "Murano, Burano and Torcello", "Venice Gondola Ride"};
+    private String[] milanA = {"Duomo di Milan", "Galleria Vittorio Emanuele II", "Lake Como"};
+    private String[] boraA = {"Maitra Beach", "Coral Gardens", "Shark/Stingray Feeding"};
+    private String[] dubaiA = {"Burj Khalifa", "Dubai Mall", "Burj Al Arab"};
+    private String[] bangkokA = {"The Grand Palace", "Chatuchak Market", "Chao Phraya River"};
+    private String[] baliA = {"Sanur", "Uluwatu Temple", "Ubud Monkey Forest"};
+    private String[] londonA = {"Big Ben", "Tower of London", "London Eye"};
+    private String[] newoA = {"Bourbon Street", "Jackson Square", "French Quarter"};
+    private String[] honoA = {"Hanauma Bay", "Diamond Head", "Waikiki Beach"};
+    private String[] kualaA = {"Batu Caves", "Menara Kuala Lumpur", "Petronas Towers"};
+    private String[] instanbulA = {"Hagia Sophia", "Blue Mosque", "Topkapi Palace"};
+    private String[] tokyoA = {"Tokyo Skytree", "Sensoji Temple", "Ueno Park"};
 
     private Location[] locations = {
             new Location("Paris", "France", parisA),
