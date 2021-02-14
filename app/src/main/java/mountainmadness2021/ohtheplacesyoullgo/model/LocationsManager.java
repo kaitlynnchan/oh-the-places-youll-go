@@ -11,7 +11,7 @@ public class LocationsManager {
     private String[] dublinA = {"Dublin Castle", "Phoenix Park and Dublin Zoo", "Guinness Storehouse"};
     private String[] nycA = {"Statue of Liberty", "Central Park", "Empire State Building"};
     private String[] mauiA = {"Hana Highway", "Kaanapali Beach", "Haleakala National Park"};
-    private String[] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre"};
+    private String[] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre)"};
     private String[] cancunA = {"Cancun Underwater Museum", "Playa Norte", "Xcaret Park"};
     private String[] santA = {"Kamari Beach", "Amoudi Bay", "Fira to Oia Hike"};
     private String[] veniceA = {"St. Mark’s Square", "Murano, Burano and Torcello", "Venice Gondola Ride"};
@@ -26,6 +26,16 @@ public class LocationsManager {
     private String[] kualaA = {"Batu Caves", "Menara Kuala Lumpur", "Petronas Towers"};
     private String[] instanbulA = {"Hagia Sophia", "Blue Mosque", "Topkapi Palace"};
     private String[] tokyoA = {"Tokyo Skytree", "Sensoji Temple", "Ueno Park"};
+    private String[] tahitiA = {"Mount 'Orohen", "La Plage de Maui", "Fautaua Waterfall"};
+    private String[] romeA = {"Colosseum", "Vatican City", "Trevi Fountain"};
+    private String[] barcelonaA = {"Parc Guell: Gaudi's Surrealist Park", "Casa Batllo", "The Magic Fountain"};
+    private String[] banffA = {"Sulphur Mountain", "Lake Louise", "Moraine Lake"};
+    private String[] amsterdamA = {"Jordaan", "Dam Square", "Royal Palace of Amsterdam"};
+    private String[] sanfranA = {"Golden Gate Bridge", "Fisherman's Wharf", "Ride Cable Cars"};
+    private String[] riodejaneiroA = {"Cristo Redentor", "Sugarloaf", "Copacabana"};
+    private String[] sanjoseA = {"Winchster Mystery House", "Santana Row", "San Jose Museum of Art"};
+    private String[] niagaraA = {"Niagara Falls", "Journey Behind the Falls", "Hornblower Niagara Cruises"};
+
 
     private Location[] locations = {
             new Location("Paris", "France", parisA),
@@ -39,7 +49,7 @@ public class LocationsManager {
             new Location("Santorini", "Greece",santA),
             new Location("Venice", "Italy", veniceA),
             new Location("Milan", "Italy", milanA),
-            new Location("Bora Bora", "Polynesia", boraA),
+            new Location("Bora Bora", "French Polynesia", boraA),
             new Location("Dubai", "United Arabs Emirates", dubaiA),
             new Location("Bangkok", "Thailand", bangkokA),
             new Location("Bali", "India", baliA),
@@ -48,7 +58,16 @@ public class LocationsManager {
             new Location("Honolulu", "USA", honoA),
             new Location("Kuala Lumpur", "Malaysia",kualaA),
             new Location("Istanbul", "Turkey", instanbulA),
-            new Location("Tokyo", "Japan", tokyoA)
+            new Location("Tokyo", "Japan", tokyoA),
+            new Location("Tahiti", "French Polynesia", tahitiA),
+            new Location("Rome", "Italy", romeA),
+            new Location("Barcelona", "Spain", barcelonaA),
+            new Location("Banff", "Canada", banffA),
+            new Location("Amsterdam", "Netherlands", amsterdamA),
+            new Location("San Francisco", "USA", sanfranA),
+            new Location("Rio de Janeiro", "Brazil", riodejaneiroA),
+            new Location("San Jose","Costa Rica", sanjoseA),
+            new Location("Niagara Falls", "Canada", niagaraA)
     };
 
     public Location getRandomLocation(){

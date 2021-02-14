@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C7E9F8"
     tools:context=".ui.MainActivity">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Oh the Places You'll Go"
+        android:textColor="#3F51B5"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(After Covid)"
+        android:textColor="#3F51B5"
         app:layout_constraintEnd_toEndOf="@+id/tv_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -30,27 +33,33 @@
         android:id="@+id/btn_generate"
         android:layout_width="126dp"
         android:layout_height="61dp"
+        android:background="@drawable/drawable_button_round"
         android:text="Seuss it up!"
         android:textColor="#3F51B5"
+        android:textColorHighlight="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.705" />
 
     <TextView
         android:id="@+id/tv_generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Click to decide your future destination!"
+        android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/btn_generate"
         app:layout_constraintEnd_toEndOf="@+id/btn_generate"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/btn_generate" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/plane"
         android:layout_width="232dp"
         android:layout_height="292dp"
         android:src="@drawable/logo"

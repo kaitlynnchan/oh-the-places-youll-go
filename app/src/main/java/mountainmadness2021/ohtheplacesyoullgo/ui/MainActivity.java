@@ -1,11 +1,14 @@
 package mountainmadness2021.ohtheplacesyoullgo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.animation.ObjectAnimator;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.*;
@@ -14,6 +17,15 @@ import mountainmadness2021.ohtheplacesyoullgo.R;
 import mountainmadness2021.ohtheplacesyoullgo.model.LocationsManager;
 
 public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ImageView plane = findViewById(R.id.plane);
+        plane.setX(0);
+        plane.setY(0);
+
+    }
+
 
     private LocationsManager locationsManager;
 
@@ -45,10 +57,26 @@ public class MainActivity extends AppCompatActivity {
 //                int int_random = rand.nextInt(places.length);
 //                System.out.println(places[int_random]);
 
+                ImageView plane = findViewById(R.id.plane);
+                ObjectAnimator moveY = ObjectAnimator.ofFloat(plane , "translationY", -2000);
+                moveY.setDuration(2);
+                moveY.start();
 
-                Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, locationsManager.getRandomLocation());
-                startActivity(intent);
-            }
+                ObjectAnimator moveX = ObjectAnimator.ofFloat(plane, "translationX", 2000);
+                moveX.setDuration(2);
+                moveX.start();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, locationsManager.getRandomLocation());
+                        startActivity(intent);
+                    }
+                }, 2);
+
+
+
+            };
         });
     }
 }
