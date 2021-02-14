@@ -10,7 +10,12 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -49,20 +54,21 @@ public class PlaceInfoActivity extends AppCompatActivity {
     }
 
     private void flags() {
-        try {
-            URL url = new URL("https://entertainingwithbeth.com/foolproof-french-macaron-recipe/");
-
-            Scanner scanner = new Scanner(url.openStream());
-//            int i = 0;
-//            while(scanner.hasNext() && i < 5){
-//                String line = scanner.nextLine();
-//                System.out.println(line);
-//                i++;
+        FlagURL.fineFlag();
+//        try {
+//            URL url = new URL("https://flagpedia.net/index");
+//            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+//
+//            String inputLine;
+//
+//            while ((inputLine = in.readLine()) != null) {
+//                System.out.println(inputLine);
 //            }
-            scanner.close();
-        } catch (IOException e) {
-            System.out.println("ERROR: " + e.getMessage());
-        }
+//
+//            in.close();
+//        } catch (Exception e) {
+//            System.out.println("ERROR: " + e.getMessage());
+//        }
     }
 
     private void setupAttractions() {
