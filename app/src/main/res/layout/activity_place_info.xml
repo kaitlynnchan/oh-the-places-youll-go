@@ -65,10 +65,10 @@
 
             <TextView
                 android:id="@+id/titleFunFact"
-                android:layout_width="105dp"
-                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Fun Fact:"
+                android:text="@string/fun_fact"
                 android:textColor="#3F51B5"
                 android:textSize="18sp"
                 android:textStyle="bold"

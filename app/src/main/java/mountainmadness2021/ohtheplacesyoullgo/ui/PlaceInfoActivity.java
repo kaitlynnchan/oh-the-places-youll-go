@@ -14,18 +14,13 @@ import mountainmadness2021.ohtheplacesyoullgo.R;
 import mountainmadness2021.ohtheplacesyoullgo.model.Location;
 import mountainmadness2021.ohtheplacesyoullgo.model.LocationsManager;
 
-import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
-
 public class PlaceInfoActivity extends AppCompatActivity {
-
-    public static final String EXTRA_LOCATION = "location";
 
     private LocationsManager manager = new LocationsManager();
     private Location location;
 
-    public static Intent makeLaunchIntent(Context context, Location location){
+    public static Intent makeLaunchIntent(Context context){
         Intent intent = new Intent(context, PlaceInfoActivity.class);
-//        intent.putExtra(EXTRA_LOCATION, location);
         return intent;
     }
     @Override
@@ -33,22 +28,23 @@ public class PlaceInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_info);
 
-//        Intent intent = getIntent();
-//        String place = intent.getStringExtra(EXTRA_LOCATION);
-
         location = manager.getRandomLocation();
 
         TextView locationtv = findViewById(R.id.tv_location);
         locationtv.setText(location.getCity() + ",\n" + location.getCountry());
 
-//        flags();
+        flags();
         setupAttractions();
+
+        TextView funFacts = findViewById(R.id.titleFunFact);
+        funFacts.setText(funFacts.getText() + location.getFact());
+
         setupBackButton();
     }
-//
-//    private void flags() {
-//        URL url
-//    }
+
+    private void flags() {
+//        FlagURL.fineFlag();
+    }
 
     private void setupAttractions() {
         LinearLayout attractionsLl = findViewById(R.id.ll_attractions);
