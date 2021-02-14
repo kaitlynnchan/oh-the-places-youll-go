@@ -14,6 +14,8 @@ import mountainmadness2021.ohtheplacesyoullgo.R;
 import mountainmadness2021.ohtheplacesyoullgo.model.Location;
 import mountainmadness2021.ohtheplacesyoullgo.model.LocationsManager;
 
+import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
+
 public class PlaceInfoActivity extends AppCompatActivity {
 
     public static final String EXTRA_LOCATION = "location";
@@ -39,9 +41,14 @@ public class PlaceInfoActivity extends AppCompatActivity {
         TextView locationtv = findViewById(R.id.tv_location);
         locationtv.setText(location.getCity() + ",\n" + location.getCountry());
 
+//        flags();
         setupAttractions();
         setupBackButton();
     }
+//
+//    private void flags() {
+//        URL url
+//    }
 
     private void setupAttractions() {
         LinearLayout attractionsLl = findViewById(R.id.ll_attractions);
