@@ -10,38 +10,23 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
-
 import mountainmadness2021.ohtheplacesyoullgo.R;
 import mountainmadness2021.ohtheplacesyoullgo.model.Location;
 import mountainmadness2021.ohtheplacesyoullgo.model.LocationsManager;
 
 public class PlaceInfoActivity extends AppCompatActivity {
 
-    public static final String EXTRA_LOCATION = "location";
-
     private LocationsManager manager = new LocationsManager();
     private Location location;
 
-    public static Intent makeLaunchIntent(Context context, Location location){
+    public static Intent makeLaunchIntent(Context context){
         Intent intent = new Intent(context, PlaceInfoActivity.class);
-//        intent.putExtra(EXTRA_LOCATION, location);
         return intent;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_info);
-
-//        Intent intent = getIntent();
-//        String place = intent.getStringExtra(EXTRA_LOCATION);
 
         location = manager.getRandomLocation();
 
@@ -50,25 +35,15 @@ public class PlaceInfoActivity extends AppCompatActivity {
 
         flags();
         setupAttractions();
+
+        TextView funFacts = findViewById(R.id.titleFunFact);
+        funFacts.setText(funFacts.getText() + location.getFact());
+
         setupBackButton();
     }
 
     private void flags() {
-        FlagURL.fineFlag();
-//        try {
-//            URL url = new URL("https://flagpedia.net/index");
-//            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-//
-//            String inputLine;
-//
-//            while ((inputLine = in.readLine()) != null) {
-//                System.out.println(inputLine);
-//            }
-//
-//            in.close();
-//        } catch (Exception e) {
-//            System.out.println("ERROR: " + e.getMessage());
-//        }
+//        FlagURL.fineFlag();
     }
 
     private void setupAttractions() {
