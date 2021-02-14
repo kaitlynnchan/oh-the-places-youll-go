@@ -10,11 +10,13 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.Scanner;
+
 import mountainmadness2021.ohtheplacesyoullgo.R;
 import mountainmadness2021.ohtheplacesyoullgo.model.Location;
 import mountainmadness2021.ohtheplacesyoullgo.model.LocationsManager;
-
-import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
 
 public class PlaceInfoActivity extends AppCompatActivity {
 
@@ -41,14 +43,27 @@ public class PlaceInfoActivity extends AppCompatActivity {
         TextView locationtv = findViewById(R.id.tv_location);
         locationtv.setText(location.getCity() + ",\n" + location.getCountry());
 
-//        flags();
+        flags();
         setupAttractions();
         setupBackButton();
     }
-//
-//    private void flags() {
-//        URL url
-//    }
+
+    private void flags() {
+        try {
+            URL url = new URL("https://entertainingwithbeth.com/foolproof-french-macaron-recipe/");
+
+            Scanner scanner = new Scanner(url.openStream());
+//            int i = 0;
+//            while(scanner.hasNext() && i < 5){
+//                String line = scanner.nextLine();
+//                System.out.println(line);
+//                i++;
+//            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("ERROR: " + e.getMessage());
+        }
+    }
 
     private void setupAttractions() {
         LinearLayout attractionsLl = findViewById(R.id.ll_attractions);
