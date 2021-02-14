@@ -51,4 +51,7 @@ public class LocationsManager {
             new Location("Tokyo", "Japan", tokyoA)
     };
 
+    public Location getRandomLocation(){
+        return locations[new Random().nextInt(locations.length)];
+    }
 }

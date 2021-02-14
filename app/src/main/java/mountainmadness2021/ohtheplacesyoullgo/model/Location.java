@@ -1,6 +1,11 @@
 package mountainmadness2021.ohtheplacesyoullgo.model;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 
 public class Location {
     private String city;
@@ -18,31 +23,21 @@ public class Location {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getCountry() {
         return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public double getEstimatedCost() {
         return estimatedCost;
     }
 
-    public void setEstimatedCost(double estimatedCost) {
-        this.estimatedCost = estimatedCost;
-    }
-
-    public String[] getAttractions() {
-        return attractions;
-    }
-
-    public void setAttractions(String [] attractions) {
-        this.attractions = attractions;
+    public Iterable<String> attractions() {
+        return new Iterable<String>() {
+            @NonNull
+            @Override
+            public Iterator<String> iterator() {
+                return Collections.unmodifiableCollection(Arrays.asList(attractions)).iterator();
+            }
+        };
     }
 }
