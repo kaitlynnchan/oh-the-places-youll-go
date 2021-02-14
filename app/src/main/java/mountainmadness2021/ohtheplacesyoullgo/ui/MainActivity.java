@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         ImageView plane = findViewById(R.id.plane);
-        plane.setX(0.206f*232f);
-        plane.setY(0.669f*292f);
+        plane.setX(0);
+        plane.setY(0);
 
     }
 
@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
                 ImageView plane = findViewById(R.id.plane);
                 ObjectAnimator moveY = ObjectAnimator.ofFloat(plane , "translationY", -2000);
-                moveY.setDuration(1500);
+                moveY.setDuration(2);
                 moveY.start();
 
                 ObjectAnimator moveX = ObjectAnimator.ofFloat(plane, "translationX", 2000);
-                moveX.setDuration(1500);
+                moveX.setDuration(2);
                 moveX.start();
 
                 new Handler().postDelayed(new Runnable() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, locationsManager.getRandomLocation());
                         startActivity(intent);
                     }
-                }, 1500);
+                }, 2);
 
 
 
