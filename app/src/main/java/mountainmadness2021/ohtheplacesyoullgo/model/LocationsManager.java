@@ -24,7 +24,7 @@ public class LocationsManager {
     private String[] newoA = {"Bourbon Street", "Jackson Square", "French Quarter"};
     private String[] honoA = {"Hanauma Bay", "Diamond Head", "Waikiki Beach"};
     private String[] kualaA = {"Batu Caves", "Menara Kuala Lumpur", "Petronas Towers"};
-    private String[] instanbulA = {"Hagia Sophia", "Blue Mosque", "Topkapi Palace"};
+    private String[] istanbulA = {"Hagia Sophia", "Blue Mosque", "Topkapi Palace"};
     private String[] tokyoA = {"Tokyo Skytree", "Sensoji Temple", "Ueno Park"};
     private String[] tahitiA = {"Mount 'Orohen", "La Plage de Maui", "Fautaua Waterfall"};
     private String[] romeA = {"Colosseum", "Vatican City", "Trevi Fountain"};
@@ -38,36 +38,36 @@ public class LocationsManager {
 
 
     private Location[] locations = {
-            new Location("Paris", "France", parisA),
-            new Location("Sydney", "Australia", sydneyA),
-            new Location("Queenstown", "New Zealand", queenstownA),
-            new Location("Dublin", "Ireland", dublinA),
-            new Location("New York City", "USA",nycA),
-            new Location("Maui", "USA", mauiA),
-            new Location("Reykjavik", "Iceland", reyA),
-            new Location("Cancun", "Mexico", cancunA),
-            new Location("Santorini", "Greece",santA),
-            new Location("Venice", "Italy", veniceA),
-            new Location("Milan", "Italy", milanA),
-            new Location("Bora Bora", "French Polynesia", boraA),
-            new Location("Dubai", "United Arabs Emirates", dubaiA),
-            new Location("Bangkok", "Thailand", bangkokA),
-            new Location("Bali", "India", baliA),
-            new Location("London", "England", londonA),
-            new Location("New Orleans", "USA",newoA),
-            new Location("Honolulu", "USA", honoA),
-            new Location("Kuala Lumpur", "Malaysia",kualaA),
-            new Location("Istanbul", "Turkey", instanbulA),
-            new Location("Tokyo", "Japan", tokyoA),
-            new Location("Tahiti", "French Polynesia", tahitiA),
-            new Location("Rome", "Italy", romeA),
-            new Location("Barcelona", "Spain", barcelonaA),
-            new Location("Banff", "Canada", banffA),
-            new Location("Amsterdam", "Netherlands", amsterdamA),
-            new Location("San Francisco", "USA", sanfranA),
-            new Location("Rio de Janeiro", "Brazil", riodejaneiroA),
-            new Location("San Jose","Costa Rica", sanjoseA),
-            new Location("Niagara Falls", "Canada", niagaraA)
+            new Location("Paris", "France", parisA, "The city has only one stop sign"),
+            new Location("Sydney", "Australia", sydneyA, "The Sydney Harbour Bridge is tallest steel arch bridge in the world"),
+            new Location("Queenstown", "New Zealand", queenstownA, "The rivers still contain some gold"),
+            new Location("Dublin", "Ireland", dublinA, "Dublin's O'Connell Street is widest street in Europe"),
+            new Location("New York City", "USA",nycA, "There are over 800 languages spoken in the city"),
+            new Location("Maui", "USA", mauiA, "Mount Haleakala is the world's largest dormant mountain"),
+            new Location("Reykjavik", "Iceland", reyA, "The city is the world's only capital to have a puffin breeding colony"),
+            new Location("Cancun", "Mexico", cancunA, "Because the city's white sand is made from crushed coral you won't burn your feet on it"),
+            new Location("Santorini", "Greece",santA, "The city has more than 100 different varieties of grapes"),
+            new Location("Venice", "Italy", veniceA, "Venice has 417 bridges"),
+            new Location("Milan", "Italy", milanA, "Milan La Scala Opera is the largest opera house in Europe"),
+            new Location("Bora Bora", "French Polynesia", boraA, "The island was formed by a volcanic eruption 4 million years ago"),
+            new Location("Dubai", "United Arabs Emirates", dubaiA, "The interior of the Burj Al Arab is decorated with 1,790 square meters of 24-carat gold leaf."),
+            new Location("Bangkok", "Thailand", bangkokA, "The city is home to the largest solid gold Buddha statue is the world"),
+            new Location("Bali", "Indonesia", baliA, "Both of Bali's volcanoes are considered active"),
+            new Location("London", "England", londonA, "The city has 170 museums"),
+            new Location("New Orleans", "USA",newoA, "The city was the first in the USA to host Opera"),
+            new Location("Honolulu", "USA", honoA, "Waikiki Beach attracts over 70,000 tourists a day"),
+            new Location("Kuala Lumpur", "Malaysia",kualaA, "A group of Chinese tin miners founded the city"),
+            new Location("Istanbul", "Turkey", istanbulA, "Istanbul is the only city to be a part of two continents (Asia and Europe) "),
+            new Location("Tokyo", "Japan", tokyoA, "The Tokyo Skytree is one of the tallest buildings in the world"),
+            new Location("Tahiti", "French Polynesia", tahitiA, "Tahiti is the birthplace of the overwater bungalow"),
+            new Location("Rome", "Italy", romeA, "The city has 280 fountains"),
+            new Location("Barcelona", "Spain", barcelonaA, "There were no beaches in Barcelona before the 1992 Olympics"),
+            new Location("Banff", "Canada", banffA, "There are over 1600km of hiking trails in Banff"),
+            new Location("Amsterdam", "Netherlands", amsterdamA, "There are 100km of canals for visitors to travel along"),
+            new Location("San Francisco", "USA", sanfranA, "The Golden Gate Bridge was constructed during the great depression"),
+            new Location("Rio de Janeiro", "Brazil", riodejaneiroA, "The city's mosaic sidewalks have dozens of QR codes installed in them"),
+            new Location("San Jose","Costa Rica", sanjoseA, "The city is in the middle of a tropical rainforest"),
+            new Location("Niagara Falls", "Canada", niagaraA, "Niagara Falls is the largest waterfall in North America by volume and width")
     };
 
     public Location getRandomLocation(){
