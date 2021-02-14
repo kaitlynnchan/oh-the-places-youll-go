@@ -12,11 +12,13 @@ public class Location {
     private String country;
     private double estimatedCost;
     private String [] attractions;
+    private String fact;
 
-    public Location(String city, String country, String [] attractions) {
+    public Location(String city, String country, String [] attractions, String fact) {
         this.city = city;
         this.country = country;
         this.attractions = attractions;
+        this.fact = fact;
     }
 
     public String getCity() {
@@ -39,5 +41,9 @@ public class Location {
                 return Collections.unmodifiableCollection(Arrays.asList(attractions)).iterator();
             }
         };
+    }
+
+    public String getFact() {
+        return fact;
     }
 }

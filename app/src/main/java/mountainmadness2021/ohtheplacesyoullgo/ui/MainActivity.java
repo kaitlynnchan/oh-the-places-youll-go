@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
                 ImageView plane = findViewById(R.id.plane);
                 ObjectAnimator moveY = ObjectAnimator.ofFloat(plane , "translationY", -2000);
-                moveY.setDuration(2);
+                moveY.setDuration(500);
                 moveY.start();
 
                 ObjectAnimator moveX = ObjectAnimator.ofFloat(plane, "translationX", 2000);
-                moveX.setDuration(2);
+                moveX.setDuration(500);
                 moveX.start();
 
                 new Handler().postDelayed(new Runnable() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, locationsManager.getRandomLocation());
                         startActivity(intent);
                     }
-                }, 2);
+                }, 500);
 
 
 
