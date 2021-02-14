@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="@+id/btn_generate" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/plane"
         android:layout_width="232dp"
         android:layout_height="292dp"
         android:src="@drawable/logo"
