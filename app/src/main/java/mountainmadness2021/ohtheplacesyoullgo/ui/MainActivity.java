@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
 //                System.out.println(places[int_random]);
 
                 ImageView plane = findViewById(R.id.plane);
-                ObjectAnimator moveY = ObjectAnimator.ofFloat(plane , "translationY", -300);
-                moveY.setDuration(2000);
+                ObjectAnimator moveY = ObjectAnimator.ofFloat(plane , "translationY", -2000);
+                moveY.setDuration(1500);
                 moveY.start();
 
-                ObjectAnimator moveX = ObjectAnimator.ofFloat(plane, "translationX", 500);
-                moveX.setDuration(2000);
+                ObjectAnimator moveX = ObjectAnimator.ofFloat(plane, "translationX", 2000);
+                moveX.setDuration(1500);
                 moveX.start();
 
                 new Handler().postDelayed(new Runnable() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = PlaceInfoActivity.makeLaunchIntent(MainActivity.this, locationsManager.getRandomLocation());
                         startActivity(intent);
                     }
-                }, 2000);
+                }, 1500);
 
 
 

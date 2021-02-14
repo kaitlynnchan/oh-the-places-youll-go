@@ -11,7 +11,7 @@ public class LocationsManager {
     private String[] dublinA = {"Dublin Castle", "Phoenix Park and Dublin Zoo", "Guinness Storehouse"};
     private String[] nycA = {"Statue of Liberty", "Central Park", "Empire State Building"};
     private String[] mauiA = {"Hana Highway", "Kaanapali Beach", "Haleakala National Park"};
-    private String[] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre"};
+    private String[] reyA = {"Blue Lagoon", "The Pearl (Perlan)", "Aurora Reykjavik (Northern Lights Centre)"};
     private String[] cancunA = {"Cancun Underwater Museum", "Playa Norte", "Xcaret Park"};
     private String[] santA = {"Kamari Beach", "Amoudi Bay", "Fira to Oia Hike"};
     private String[] veniceA = {"St. Mark’s Square", "Murano, Burano and Torcello", "Venice Gondola Ride"};
